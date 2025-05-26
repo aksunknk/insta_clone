@@ -70,7 +70,7 @@ class Post(models.Model):
         return self.title
     
 
-class comment(models.Model):
+class Comment(models.Model):
     text = models.CharField(max_length=100)
     userComment = models.ForeignKey(
         settings.AUTH_USER_MODEL, related_name="userComment",
@@ -80,3 +80,4 @@ class comment(models.Model):
 
     def __str__(self):
         return self.text
+    
